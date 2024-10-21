@@ -1,0 +1,18 @@
+# Recipe ingredients for one loaf of bread
+water_per_loaf = 1.5  # cups
+yeast_per_loaf = 1     # tablespoon
+flour_per_loaf = 4.5   # cups
+oil_per_loaf = 2       # tablespoons
+
+# Prompt the user for the number of loaves
+num_loaves = int(input("How many loaves do you want to make? "))
+
+# Calculate the total amounts of each ingredient needed
+total_water = round(water_per_loaf * num_loaves, 1)
+total_yeast = round(yeast_per_loaf * num_loaves, 1)
+total_flour = round(flour_per_loaf * num_loaves, 1)
+total_oil = round(oil_per_loaf * num_loaves, 1)
+
+# Display the results, ensuring all values have one decimal place
+print(f"You need {total_water:.1f} cups of warm water, {total_yeast:.1f} tablespoons of yeast, "
+      f"{total_flour:.1f} cups of all-purpose flour, and {total_oil:.1f} tablespoons of oil.")
