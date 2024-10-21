@@ -1,0 +1,29 @@
+# Prompt for user input
+if (user_input := input()).isdigit() and (number := int(user_input)) > 0:
+    print("The number is magic!" if number % 2 == 0 and number % 3 == 0 and number % 5 == 0 else "The number is not magic.")
+else:
+    print("You can only input positive integers.")
+
+
+
+
+
+
+
+#second assignment
+
+# Prompt the user for the two colors
+Color1 = input("Enter the first color: ") 
+Color2 = input("Enter the second color: ")
+
+# Check if color is valid within the range
+if Color1 not in ['red', 'green', 'yellow', 'purple', 'blue', 'orange'] or Color2 not in ['red', 'green', 'yellow', 'purple', 'blue', 'orange']:
+    print("You did not enter one of red, orange, yellow, green, blue or purple")
+else:
+    # Check if colors are complementary
+    if (Color1 == 'red' and Color2 == 'green') or (Color1 == 'green' and Color2 == 'red') or \
+       (Color1 == 'yellow' and Color2 == 'purple') or (Color1 == 'purple' and Color2 == 'yellow') or \
+       (Color1 == 'blue' and Color2 == 'orange') or (Color1 == 'orange' and Color2 == 'blue'):
+        print("The two colors are complementary")
+    else:
+        print("The two colors are not complementary")
