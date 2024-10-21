@@ -1,0 +1,20 @@
+import math
+
+# Function to calculate the apothem
+def apothem(number_of_sides, side_length):
+    return side_length / (2 * math.tan(math.radians(180 / number_of_sides)))
+
+# Function to calculate the area of the polygon
+def area(number_of_sides, side_length):
+    perimeter = number_of_sides * side_length
+    apo = apothem(number_of_sides, side_length)
+    return 0.5 * perimeter * apo
+
+# Main program logic
+if __name__ == "__main__":
+    number_of_sides = int(input("Enter the number of sides: "))
+    side_length = float(input("Enter the side's length: "))
+
+    # Calculate the area and print it rounded to two decimal places
+    polygon_area = area(number_of_sides, side_length)
+    print(f"{polygon_area:.2f}")
