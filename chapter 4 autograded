@@ -1,0 +1,36 @@
+while True: 
+    print("Please enter your age: ")
+    user_input = input()
+
+    if not user_input.isdigit():
+            print("Invalid input! Please enter a valid number.")
+
+    else:
+        age = int (user_input)
+        if age < 0 or age > 120:
+            print("Invalid input! Age must be between 0 and 120.")
+        else:
+            print(f"Thank you! You entered a valid age: {age}")
+            break
+
+  
+# second problem
+
+def print_word_reverse_diagonal():
+    word = (input("Enter a word:"))
+    size = int(input("Enter a number: "))
+    
+    grid = []
+    for i in range(size):
+        row = []
+        for j in range (size):
+            row.append('-')
+        grid.append(row)
+
+    for i in range(size):
+        grid[i][size - 1 - i] = word 
+    for i in range(size):
+        for j in range(size):
+            print(grid[i][j], end=' ')
+        print()
+print_word_reverse_diagonal()
